@@ -12,7 +12,6 @@ class Bottle:
         ObjectFile = 'coco.names'
         with open(ObjectFile, 'r') as ObjNam:
             ObjectNames = ObjNam.read().rstrip('\n').split('\n')
-            # print(ObjectNames[43])
 
         configPath = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
         weighPath = 'frozen_inference_graph.pb'
@@ -28,18 +27,15 @@ class Bottle:
         MyPoints = MyPoints.reshape((4, 2))
         MyPointsNew = np.zeros((4, 1, 2), np.int32)
         add = MyPoints.sum(0)
-        # print("add", add)
 
         MyPointsNew[0] = MyPoints[np.argmin(add)]
         MyPointsNew[3] = MyPoints[np.argmax(add)]
         diff = np.diff(MyPoints, axis=1)
         MyPointsNew[1] = MyPoints[np.argmin(diff)]
         MyPointsNew[2] = MyPoints[np.argmax(diff)]
-        # print("NewPoints",MyPointsNew)
         return MyPointsNew
 
     def WarpImage(self, image, x, y, w, h, Width, Height):
-        # print(boundary)
         pts1 = np.float32([[x, y], [x + w, y], [x, y + h], [x + w, y + h]])
         pts2 = np.float32([[0, 0], [Width, 0], [0, Height], [Width, Height]])
         matrix = cv.getPerspectiveTransform(pts1, pts2)
@@ -51,19 +47,14 @@ class Bottle:
 
     def ObjectDec(self, image, ObjectNames):
         ObjectIds, confid, bbox = self.net.detect(image, self.confThreshold)
-        # Bott = ObjectIds[0]
-        # print(Bott)
-        # print(ObjectIds)
         boundary = []
         if len(ObjectIds) != 0:
             for ids, value in enumerate(ObjectIds):
-                # print(ids, value)
                 if value == 44:
                     for ObjectIds, confident, box in zip(ObjectIds.flatten(), confid.flatten(), bbox):
                         boundary = box
                         cv.rectangle(image, box, color=(255, 255, 255), thickness=3)
                         cv.putText(image, ObjectNames[ObjectIds - 1], (box[0] + 10, box[1] - 50),
                                    cv.FONT_HERSHEY_COMPLEX, 1, (0, 0, 250), 1)
-                        # print(type(box))
 
         return boundary
