@@ -6,8 +6,16 @@ Here, the bottle moves on a conveyvor from the Fluid Plant to the Quality Statio
 
 For detecting the bottle in the environment, Deep Neutral Network (DNN) Module is being used based on weighpath and configpath in addition to COCO dataset.
 
-configPath = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
+configPath = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt';
 weighPath = 'frozen_inference_graph.pb'
+
+Warping the Bottle inorder remove unwanted environment in the image background.
+
+Performing Image Processing techniques like threshold, blurring, canning are used to find the fluid present(Level)
+
+#Note : the Quality processes is yet to be done.
+
+
 
 
 
