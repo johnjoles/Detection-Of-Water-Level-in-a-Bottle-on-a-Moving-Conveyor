@@ -18,7 +18,7 @@ Performing Image Processing techniques like threshold, blurring, canning are use
 <img width="470" alt="Bottle" src="https://github.com/user-attachments/assets/1c5fd97e-f173-41b2-8fc1-d48bd0d34a9c" />
 
 
-The images above illustrate the steps involved in the quantity analysis process. 
+The images illustrate the steps involved in the quantity analysis process. 
 
 ### First Window: 
 Shows the bottle detected in the environment using a Deep Neural Network (DNN). 
