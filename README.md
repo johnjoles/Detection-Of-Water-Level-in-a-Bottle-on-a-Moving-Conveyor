@@ -13,7 +13,7 @@ Warping the Bottle inorder remove unwanted environment in the image background.
 
 Performing Image Processing techniques like threshold, blurring, canning are used to find the fluid present(Level)
 
-<img width="570" alt="Bottle" src="https://github.com/user-attachments/assets/1c5fd97e-f173-41b2-8fc1-d48bd0d34a9c" />
+<img width="470" alt="Bottle" src="https://github.com/user-attachments/assets/1c5fd97e-f173-41b2-8fc1-d48bd0d34a9c" />
 
 Figure1       Figure2             Figure3
 
