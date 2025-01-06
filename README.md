@@ -15,7 +15,7 @@ Performing Image Processing techniques like threshold, blurring, canning are use
 
 <img width="270" alt="Bottle" src="https://github.com/user-attachments/assets/1c5fd97e-f173-41b2-8fc1-d48bd0d34a9c" />
 
-Figure1  Figure2  Figure3
+Figure1       Figure2       Figure3
 
 
 
