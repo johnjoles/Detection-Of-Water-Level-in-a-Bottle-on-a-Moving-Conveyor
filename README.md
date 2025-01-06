@@ -13,9 +13,14 @@ Warping the Bottle inorder remove unwanted environment in the image background.
 
 Performing Image Processing techniques like threshold, blurring, canning are used to find the fluid present(Level)
 
+
 <img width="470" alt="Bottle" src="https://github.com/user-attachments/assets/1c5fd97e-f173-41b2-8fc1-d48bd0d34a9c" />
 
-Figure1       Figure2             Figure3
+
+The images above illustrate the steps involved in the quantity analysis process. 
+The first window depicts the bottle detected in the environment using a Deep Neural Network (DNN). 
+The second window highlights the edges of the bottle after applying image processing techniques. 
+The third window shows the fluid level present in the bottle.
 
 #Note : the Quality processes is yet to be done.
 
