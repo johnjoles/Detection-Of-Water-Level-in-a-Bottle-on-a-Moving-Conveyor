@@ -17,8 +17,6 @@ Performing Image Processing techniques like threshold, blurring, canning are use
 
 Figure1       Figure2       Figure3
 
-
-
 #Note : the Quality processes is yet to be done.
 
 
