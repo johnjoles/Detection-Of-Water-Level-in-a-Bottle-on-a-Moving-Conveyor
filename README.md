@@ -20,11 +20,11 @@ Performing Image Processing techniques like threshold, blurring, canning are use
 
 The images above illustrate the steps involved in the quantity analysis process. 
 
-## First Window: 
+### First Window: 
 Shows the bottle detected in the environment using a Deep Neural Network (DNN). 
-
+### Second Window
 The second window highlights the edges of the bottle after applying image processing techniques. 
-
+### Third Window
 The third window shows the fluid level present in the bottle.
 
 #Note : the Quality processes is yet to be done.
